@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+outputs/
+
+# Waveforms, generated arrays, backups, and local settings
+*.h5
+*.hdf5
+*.asdf
+*.npy
+*.npz
+*.before_*
+.env
+.env.*
+.vscode/
+.pytest_cache/

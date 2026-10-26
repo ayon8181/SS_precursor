@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ss-precursor"
+version = "0.1.0"
+description = "Inspectable SS precursor processing and linear stacking"
+requires-python = ">=3.8"
+dependencies = ["numpy", "scipy", "obspy", "pyasdf", "matplotlib", "PyYAML"]
+
+[project.scripts]
+ss-precursor = "ss_precursor.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ss_precursor*"]

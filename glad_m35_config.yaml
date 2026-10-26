@@ -1,0 +1,36 @@
+# GLAD-M35 waveforms; PREM remains the reference for predictions and bounce geometry.
+# All-event SY-network example. Network selection is set by plan-events --network SY.
+waveform_tag: proc_glad
+event_id: null
+origin: preferred
+horizontal_convention: RT
+input_units: displacement_mm
+units_source: user_confirmed
+minimum_synthetic_period_s: 10
+reference_model: prem
+interface_depths_km: [400, 670]
+interface_depths_source: user_confirmed_PREM_and_verified_in_ObsPy_reference
+period_band_s: [10, 100]
+filter_order: 2
+detrend: linear
+taper_fraction_per_end: 0.05
+filter_padding_s: 300
+edge_guard_s: 150
+ss_search_window_s: [-30, 30]
+minimum_ss_amplitude_mm: 1.0e-10
+minimum_ss_fraction_of_trace_peak: 0.001
+polarity: ss_positive
+distance_range_degree: [80, 160]
+source_depth_range_km: [0, 6371]  # Consider all source depths; missing/ambiguous ray branches are rejected explicitly.
+interfering_phases: [S, Sdiff, ScS, ScSScS, sSS, SSS]
+interference_separation_s: 30
+reject_predicted_interference: false
+relative_time_s: [-500, 300, 1]
+slowness_s_degree: [-2, 2, 0.025]
+reference_distance_degree: null
+bin_size_degree: 5
+minimum_bin_traces: 10
+minimum_bin_events: 3
+minimum_distance_aperture_degree: 10
+stack_weighting: trace
+precursor_stack_offsets_s: [-60, 60, 1]

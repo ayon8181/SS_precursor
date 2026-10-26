@@ -1,0 +1,17 @@
+# Display controls only: reuse the existing event caches and bin plan.
+phases: [SS, S^400S, S^670S]
+moveout_mode: predicted_curve  # Remove model curvature; axis is model-reference + residual slowness.
+absolute_slowness_s_degree: [0, 20, 0.1]
+focus_time_s: [-40, 40, 0.5]
+phase_input_half_window_s: 60  # Excludes SS/other arrivals outside the phase window; unsupported samples are masked.
+precursor_zoom_s: [-300, -70]
+reference_distance_degree: null  # Mean distance of this bin's contributing traces.
+minimum_support_fraction: 0.8
+minimum_support_traces: 3
+contour_floor: 0.2
+record_max_traces: 140
+record_distance_range_degree: null  # For example [120, 150]; affects wiggle display only.
+record_gain_degree: 0.7
+record_zoom_gain_degree: 4.0  # Larger display gain for weak precursors; waveform samples are unchanged.
+formats: [png, pdf]
+dpi: 180

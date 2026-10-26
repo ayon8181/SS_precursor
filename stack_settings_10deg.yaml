@@ -1,0 +1,2 @@
+# Reuse completed event caches; change only the geographic cell size.
+bin_size_degree: 10
